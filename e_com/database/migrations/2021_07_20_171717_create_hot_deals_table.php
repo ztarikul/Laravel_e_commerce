@@ -16,7 +16,7 @@ class CreateHotDealsTable extends Migration
         Schema::create('hot_deals', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('discount');
+            $table->float('discount');
             $table->date('expire_date');
             $table->time('expire_time');
             $table->timestamps();
