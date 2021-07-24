@@ -53,7 +53,7 @@ class CatagoriesSeeder extends Seeder
            ],
            [
             'id'=>7,
-            'name'=>'Kids',
+            'name'=>'Accesories',
             'created_at'=> now(),
   
            ],
