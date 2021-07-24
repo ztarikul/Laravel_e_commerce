@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class SubSubCatagory extends Model
 {
     use HasFactory;
+    Protected $guarded = [];
 }

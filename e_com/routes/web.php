@@ -26,3 +26,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/covid19', [HomeController::class, 'covid_form'])->name('covid.form');
 Route::post('/covid19_tracker', [HomeController::class, 'covid_tracker'])->name('covid.tracker');
 
+
+
+
