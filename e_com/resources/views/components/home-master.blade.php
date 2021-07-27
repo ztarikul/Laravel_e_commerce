@@ -47,6 +47,7 @@
             <li class="header_cart hidden-xs"><a href="#"><span>My Cart</span></a></li>
             <li class="check"><a href="#"><span>Checkout</span></a></li>
             <li class="login"><a href="{{route('customer.index')}}"><span>Login</span></a></li>
+            <li class="login"><a href="{{route('customer.registration')}}"><span>Registration</span></a></li>
           </ul>
         </div>
         <!-- /.cnt-account -->
