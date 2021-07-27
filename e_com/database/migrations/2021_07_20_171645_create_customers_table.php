@@ -20,9 +20,8 @@ class CreateCustomersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->text('address')->nullable();
-            $table->string('phone');
+            $table->string('phone')->unique();
             $table->text('image')->nullable();
-            $table->rememberToken();
             $table->timestamps();
         });
     }
