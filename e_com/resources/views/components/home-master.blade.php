@@ -42,12 +42,19 @@
       <div class="header-top-inner">
         <div class="cnt-account">
           <ul class="list-unstyled">
+          @if (Session::has('LoggedCustomer'))
             <li class="myaccount"><a href="#"><span>My Account</span></a></li>
             <li class="wishlist"><a href="#"><span>Wishlist</span></a></li>
             <li class="header_cart hidden-xs"><a href="#"><span>My Cart</span></a></li>
             <li class="check"><a href="#"><span>Checkout</span></a></li>
-            <li class="login"><a href="{{route('customer.index')}}"><span>Login</span></a></li>
+            <li class="login"><a href="{{route('customer.logout')}}"><span>Logout</span></a></li>
+            
+          @else
+          
+            
+            <li class="login"><a href="{{route('customer.login')}}"><span>Login</span></a></li>
             <li class="login"><a href="{{route('customer.registration')}}"><span>Registration</span></a></li>
+          @endif
           </ul>
         </div>
         <!-- /.cnt-account -->

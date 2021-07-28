@@ -28,8 +28,11 @@ Route::post('/covid19_tracker', [HomeController::class, 'covid_tracker'])->name(
 
 
 Route::resource('customer', CustomerController::class);
-Route::post('/customer_login','CustomerController@customer_login')->name('customer.login');
+Route::get('/customer_login','CustomerController@login')->name('customer.login');
+Route::post('/customer_loginAuthenticate','CustomerController@customer_loginAuthenticate')->name('customer.loginAuthenticate');
 Route::get('/customer_registration','CustomerController@registration')->name('customer.registration');
+Route::post('/customerRegistration','CustomerController@customerRegistration')->name('customer.customerRegistration');
+Route::get('/customer_logout','CustomerController@customer_logout')->name('customer.logout');
 
 
 

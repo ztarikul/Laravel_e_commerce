@@ -24,7 +24,7 @@
 <div class="col-md-6 col-sm-6 create-new-account">
 	<h4 class="checkout-subtitle">Create a new account</h4>
 	<p class="text title-tag-line">Create your new account.</p>
-	<form class="register-form outer-top-xs" role="form" action="{{route('customer.store')}}" method="post">
+	<form class="register-form outer-top-xs" role="form" action="{{route('customer.customerRegistration')}}" method="post">
 		@csrf
 			<div class="result">
 			@if(Session::get('success'))

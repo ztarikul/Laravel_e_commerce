@@ -15,8 +15,9 @@ class CustomerController extends Controller
     public function index()
     {
         //
-        return view('customer_auth.login');
+        
     }
+   
 
     /**
      * Show the form for creating a new resource.
@@ -35,6 +36,15 @@ class CustomerController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+  
+
+
+    public function store(Request $request)
+    {
+        //
+    
+    }
+
     public function registration()
     {
         //
@@ -43,7 +53,7 @@ class CustomerController extends Controller
 
 
 
-    public function store(Request $request)
+    public function customerRegistration(Request $request)
     {
         //
         // dd($request);
@@ -70,8 +80,16 @@ class CustomerController extends Controller
     
     }
    
+
+
+
+    public function login()
+    {
+        //
+        return view('customer_auth.login');
+    }
   
-    public function customer_login(Request $request)
+    public function customer_loginAuthenticate(Request $request)
     {
         //
         // dd($request);
@@ -148,5 +166,12 @@ class CustomerController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function customer_logout()
+    {
+        if(session()->has('LoggedCustomer')){
+            session()->pull('LoggedCustomer');
+            return redirect()->route('home');
+        }
     }
 }
