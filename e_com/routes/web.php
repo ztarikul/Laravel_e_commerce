@@ -35,5 +35,8 @@ Route::post('/customerRegistration','CustomerController@customerRegistration')->
 Route::get('/customer_logout','CustomerController@customer_logout')->name('customer.logout');
 
 
+Route::resource('post', PostController::class);
+
+
 
 

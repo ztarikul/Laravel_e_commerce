@@ -2747,12 +2747,12 @@
               <div class="item">
                 <div class="blog-post">
                   <div class="blog-post-image">
-                    <div class="image"> <a href="blog.html"><img src="{{asset('images/blog-post/blog_big_01.jpg')}}" alt=""></a> </div>
+                    <div class="image"> <a href="{{route('post.index')}}"><img src="{{asset('images/blog-post/blog_big_01.jpg')}}" alt=""></a> </div>
                   </div>
                   <!-- /.blog-post-image -->
                   
                   <div class="blog-post-info text-left">
-                    <h3 class="name"><a href="#">{{$post->title}}</a></h3>
+                    <h3 class="name"><a href="{{route('post.index')}}">{{$post->title}}</a></h3>
                     <span class="info">By {{$post->user->name}} &nbsp;|&nbsp; {{$post->created_at}}</span>
                     <p class="text">{{$post->body}}</p>
                    </div>
