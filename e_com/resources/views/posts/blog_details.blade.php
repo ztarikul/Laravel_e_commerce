@@ -1,11 +1,12 @@
 <x-home-master>
 @section('content')
+
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="#">Home</a></li>
-				<li class='active'>Blog</li>
+				<li class='active'>Blog Details</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -16,30 +17,172 @@
 		<div class="row">
 			<div class="blog-page">
 				<div class="col-xs-12 col-sm-9 col-md-9 rht-col">
-					@foreach($posts as $post)
-					<div class="blog-post  wow fadeInUp">
-	<a href="{{route('post.show',$post->id)}}"><img class="img-responsive" src="{{asset('images/blog-post/blog_big_01.jpg')}}" alt=""></a>
-	<h1><a href="">{{$post->title}}</a></h1>
+					<div class="blog-post wow fadeInUp">
+	<img class="img-responsive" src="{{asset('images/blog-post/blog_big_01.jpg')}}" alt="">
+  
+	<h1>{{$post->tile}}</h1>
 	<span class="author">{{$post->user->name}}</span>
-	<span class="review">{{$post->comments()->count()}} comments</span>
-	
+	<span class="review">{{$post->comments()->count()}} Comments</span>
 	<span class="date-time">{{date('M d, Y',strtotime($post->created_at))}} {{date("H:i A", strtotime($post->created_at))}}</span>
-	<p>{{Str::limit($post->body, '200', '.....')}}</p>
-	<a href="{{route('post.show',$post->id)}}" class="btn btn-upper btn-primary read-more">read more</a>
+	<p>{{$post->body}}</p>
+	<div class="social-media">
+		<span>share post:</span>
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+		<a href="#"><i class="fa fa-rss"></i></a>
+		<a href="#" class="hidden-xs"><i class="fa fa-pinterest"></i></a>
+	</div>
 </div>
-@endforeach
-
-<span>
-	{{$posts->links('pagination::bootstrap-4')}}
-</span>
-<div class="clearfix blog-pagination filters-container  wow fadeInUp" style="padding:0px; background:none; box-shadow:none; margin-top:15px; border:none">
-						
-	<div class="text-right">
-         <div class="pagination-container">
-
-</div><!-- /.pagination-container -->    </div><!-- /.text-right -->
-
-</div><!-- /.filters-container -->				</div>
+<div class="blog-post-author-details wow fadeInUp">
+	<div class="row">
+		<div class="col-md-2">
+			<img src="{{asset('images/blog-post/blog_big_01.jpg')}}" alt="Responsive image" class="img-circle img-responsive">
+		</div>
+		<div class="col-md-10">
+			<h4>John Doe</h4>
+			<div class="btn-group author-social-network pull-right">
+				<span>Follow me on</span>
+			    <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+			    	<i class="twitter-icon fa fa-twitter"></i>
+			    	<span class="caret"></span>
+			    </button>
+			    <ul class="dropdown-menu" role="menu">
+			    	<li><a href="#"><i class="icon fa fa-facebook"></i>Facebook</a></li>
+			    	<li><a href="#"><i class="icon fa fa-linkedin"></i>Linkedin</a></li>
+			    	<li><a href="#"><i class="icon fa fa-pinterest"></i>Pinterst</a></li>
+			    	<li><a href="#"><i class="icon fa fa-rss"></i>RSS</a></li>
+			    </ul>
+			</div>
+			<span class="author-job">Web Designer</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+		</div>
+	</div>
+</div>
+					<div class="blog-review wow fadeInUp">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="title-review-comments">16 comments</h3>
+		</div>
+		<div class="col-md-2 col-sm-2">
+			<img src="assets/images/testimonials/member1.png" alt="Responsive image" class="img-rounded img-responsive">
+		</div>
+		<div class="col-md-10 col-sm-10 blog-comments outer-bottom-xs">
+			<div class="blog-comments inner-bottom-xs">
+				<h4>Jone doe</h4>
+				<span class="review-action pull-right">
+					03 Day ago &sol;   
+					<a href="#"> Repost</a> &sol;
+					<a href="#"> Reply</a>
+				</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			</div>
+			<div class="blog-comments-responce outer-top-xs ">
+				<div class="row">
+					<div class="col-md-2 col-sm-2">
+						<img src="assets/images/testimonials/member2.png" alt="Responsive image" class="img-rounded img-responsive">
+					</div>
+					<div class="col-md-10 col-sm-10 outer-bottom-xs">
+						<div class="blog-sub-comments inner-bottom-xs">
+							<h4>Sarah Smith</h4>
+							<span class="review-action pull-right">
+								03 Day ago &sol;   
+								<a href="#"> Repost</a> &sol;
+								<a href="#"> Reply</a>
+							</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-2">
+						<img src="assets/images/testimonials/member3.png" alt="Responsive image" class="img-rounded img-responsive">
+					</div>
+					<div class="col-md-10 col-sm-10">
+						<div class=" inner-bottom-xs">
+							<h4>Stephen</h4>
+							<span class="review-action pull-right">
+								03 Day ago &sol;   
+								<a href="#"> Repost</a> &sol;
+								<a href="#"> Reply</a>
+							</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-2">
+			<img src="assets/images/testimonials/member4.png" alt="Responsive image" class="img-rounded img-responsive">
+		</div>
+		<div class="col-md-10 col-sm-10">
+			<div class="blog-comments inner-bottom-xs outer-bottom-xs">
+				<h4>Saraha Smith</h4>
+				<span class="review-action pull-right">
+					03 Day ago &sol;   
+					<a href="#"> Repost</a> &sol;
+					<a href="#"> Reply</a>
+				</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-2">
+			<img src="assets/images/testimonials/member1.png" alt="Responsive image" class="img-rounded img-responsive">
+		</div>
+		<div class="col-md-10 col-sm-10">
+			<div class="blog-comment inner-bottom-xs">
+				<h4>Mark Doe</h4>
+				<span class="review-action pull-right">
+					03 Day ago &sol;   
+					<a href="#"> Repost</a> &sol;
+					<a href="#"> Reply</a>
+				</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			</div>
+		</div>
+		<div class="post-load-more col-md-12"><a class="btn btn-upper btn-primary" href="#">Load more</a></div>
+	</div>
+</div>					<div class="blog-write-comment outer-bottom-xs outer-top-xs">
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Leave A Comment</h4>
+		</div>
+		<div class="col-md-4">
+			<form class="register-form" role="form">
+				<div class="form-group">
+			    <label class="info-title" for="exampleInputName">Your Name <span>*</span></label>
+			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputName" placeholder="">
+			  </div>
+			</form>
+		</div>
+		<div class="col-md-4">
+			<form class="register-form" role="form">
+				<div class="form-group">
+			    <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
+			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" placeholder="">
+			  </div>
+			</form>
+		</div>
+		<div class="col-md-4">
+			<form class="register-form" role="form">
+				<div class="form-group">
+			    <label class="info-title" for="exampleInputTitle">Title <span>*</span></label>
+			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputTitle" placeholder="">
+			  </div>
+			</form>
+		</div>
+		<div class="col-md-12">
+			<form class="register-form" role="form">
+				<div class="form-group">
+			    <label class="info-title" for="exampleInputComments">Your Comments <span>*</span></label>
+			    <textarea class="form-control unicase-form-control" id="exampleInputComments" ></textarea>
+			  </div>
+			</form>
+		</div>
+		<div class="col-md-12 outer-bottom-small m-t-20">
+			<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Submit Comment</button>
+		</div>
+	</div>
+</div>
+				</div>
 				<div class="col-xs-12 col-sm-3 col-md-3 sidebar">
                 
                 
@@ -174,7 +317,7 @@
 	</div><!-- /.sidebar-widget-body -->
 </div><!-- /.sidebar-widget -->
 	<!-- ============================================== CATEGORY : END ============================================== -->						<div class="sidebar-widget outer-bottom-xs wow fadeInUp">
-    <h3 class="section-title">Tab Widget</h3>
+    <h3 class="section-title">tab widget</h3>
 	<ul class="nav nav-tabs">
 	  <li class="active"><a href="#popular" data-toggle="tab">popular post</a></li>
 	  <li><a href="#recent" data-toggle="tab">recent post</a></li>
@@ -221,7 +364,7 @@
 </div>
 						<!-- ============================================== PRODUCT TAGS ============================================== -->
 <div class="sidebar-widget product-tag wow fadeInUp">
-	<h3 class="section-title">Product Tags</h3>
+	<h3 class="section-title">Product tags</h3>
 	<div class="sidebar-widget-body outer-top-xs">
 		<div class="tag-list">					
 			<a class="item" title="Phone" href="category.html">Phone</a>
@@ -240,77 +383,11 @@
 				</div>
 			</div>
 		</div>
-		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
-<div id="brands-carousel" class="logo-slider wow fadeInUp">
-
-		<div class="logo-slider-inner">	
-			<div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
-				<div class="item m-t-15">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item m-t-10">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand3.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand6.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt="">
-					</a>	
-				</div><!--/.item-->
-		    </div><!-- /.owl-carousel #logo-slider -->
-		</div><!-- /.logo-slider-inner -->
-	
-</div><!-- /.logo-slider -->
-<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div>
+	</div>
 </div>
 
 
+     
+    
 @endsection
 </x-home-master>

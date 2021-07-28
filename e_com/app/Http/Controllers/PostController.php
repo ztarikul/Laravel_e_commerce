@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Post::all();
+        $posts = Post::paginate(3);
         return view('posts.blogs', ['posts' => $posts]);
 
     }
@@ -39,6 +39,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -49,7 +50,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+       $post = Post::find($id);
+       return view('posts.blog_details',['post'=> $post]);
     }
 
     /**
