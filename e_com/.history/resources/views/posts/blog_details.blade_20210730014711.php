@@ -20,7 +20,7 @@
 					<div class="blog-post wow fadeInUp">
 	<img class="img-responsive" src="{{asset('images/blog-post/blog_big_01.jpg')}}" alt="">
   
-	<h1>{{$post->title}}</h1>
+	<h1>{{$post->tile}}</h1>
 	<span class="author">{{$post->user->name}}</span>
 	<span class="review">{{$post->comments()->count()}} Comments</span>
 	<span class="date-time">{{date('M d, Y',strtotime($post->created_at))}} {{date("H:i A", strtotime($post->created_at))}}</span>
@@ -64,31 +64,18 @@
 		<div class="col-md-12">
 			<h3 class="title-review-comments">16 comments</h3>
 		</div>
-		<div class="col-md-2 col-sm-2">
+		<div id="abcd" class="col-md-2 col-sm-2">
 			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-rounded img-responsive">
 		</div>
-		<div  class="col-md-10 col-sm-10 blog-comments outer-bottom-xs">
+		<div class="col-md-10 col-sm-10 blog-comments outer-bottom-xs">
 			<div class="blog-comments inner-bottom-xs">
-				<h4 id = "b">Jone doe</h4>
+				<h4>Jone doe</h4>
 				<span class="review-action pull-right">
 					03 Day ago &sol;   
 					
-					<button type="button" onClick="MyFunction();"> Reply</button>
+					<a href="#"> Reply</a>
 				</span>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-			</div>
-			<div id="comment_box" class="row">
-				<div class="col-md-12">
-					<form class="register-form" role="form">
-						<div class="form-group">
-						<label class="info-title" for="exampleInputComments">Your Reply <span>*</span></label>
-						<textarea class="form-control unicase-form-control" id="exampleInputComments" ></textarea>
-					  </div>
-					</form>
-				</div>
-				<div class="col-md-12 outer-bottom-small">
-					<button type="submit" class="btn-upper btn btn-primary btn-sm checkout-page-button">submit</button>
-				</div>
 			</div>
 			<div class="blog-comments-responce outer-top-xs ">
 				<div class="row">

@@ -73,7 +73,7 @@
 				<span class="review-action pull-right">
 					03 Day ago &sol;   
 					
-					<button type="button" onClick="MyFunction();"> Reply</button>
+					<button id= "abcd"  onClick="MyFunction();"> Reply</button>
 				</span>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 			</div>
@@ -86,7 +86,7 @@
 					  </div>
 					</form>
 				</div>
-				<div class="col-md-12 outer-bottom-small">
+				<div class="col-md-12 outer-bottom-small m-t-20">
 					<button type="submit" class="btn-upper btn btn-primary btn-sm checkout-page-button">submit</button>
 				</div>
 			</div>

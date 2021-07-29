@@ -73,21 +73,25 @@
 				<span class="review-action pull-right">
 					03 Day ago &sol;   
 					
-					<button type="button" onClick="MyFunction();"> Reply</button>
+					<button id= "abcd"  onClick="MyFunction();"> Reply</button>
 				</span>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 			</div>
 			<div id="comment_box" class="row">
 				<div class="col-md-12">
+					<h4>Leave A Comment</h4>
+				</div>
+			
+				<div class="col-md-12">
 					<form class="register-form" role="form">
 						<div class="form-group">
-						<label class="info-title" for="exampleInputComments">Your Reply <span>*</span></label>
+						<label class="info-title" for="exampleInputComments">Your Comments <span>*</span></label>
 						<textarea class="form-control unicase-form-control" id="exampleInputComments" ></textarea>
 					  </div>
 					</form>
 				</div>
-				<div class="col-md-12 outer-bottom-small">
-					<button type="submit" class="btn-upper btn btn-primary btn-sm checkout-page-button">submit</button>
+				<div class="col-md-12 outer-bottom-small m-t-20">
+					<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Submit Comment</button>
 				</div>
 			</div>
 			<div class="blog-comments-responce outer-top-xs ">

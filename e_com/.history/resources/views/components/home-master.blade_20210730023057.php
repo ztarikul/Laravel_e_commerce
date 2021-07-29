@@ -433,10 +433,11 @@
 <script>
   $("#comment_box").hide();
   function MyFunction(){
-
+    
     $("#comment_box").toggle();
   }
- 
+ // or alert("click");
+
 </script> 
 
 <script src="js/jquery-1.11.1.min.js"></script> 

@@ -431,12 +431,7 @@
 <!-- JavaScripts placed at the end of the document so the pages load faster --> 
 
 <script>
-  $("#comment_box").hide();
-  function MyFunction(){
-
-    $("#comment_box").toggle();
-  }
- 
+ $("#abcd").hide();
 </script> 
 
 <script src="js/jquery-1.11.1.min.js"></script> 
