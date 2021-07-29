@@ -65,7 +65,7 @@
 			<h3 class="title-review-comments">16 comments</h3>
 		</div>
 		<div class="col-md-2 col-sm-2">
-			<img src="assets/images/testimonials/member1.png" alt="Responsive image" class="img-rounded img-responsive">
+			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-rounded img-responsive">
 		</div>
 		<div class="col-md-10 col-sm-10 blog-comments outer-bottom-xs">
 			<div class="blog-comments inner-bottom-xs">
@@ -80,7 +80,7 @@
 			<div class="blog-comments-responce outer-top-xs ">
 				<div class="row">
 					<div class="col-md-2 col-sm-2">
-						<img src="assets/images/testimonials/member2.png" alt="Responsive image" class="img-rounded img-responsive">
+						<img src="{{asset('images/testimonials/member2.png')}}" alt="Responsive image" class="img-rounded img-responsive">
 					</div>
 					<div class="col-md-10 col-sm-10 outer-bottom-xs">
 						<div class="blog-sub-comments inner-bottom-xs">
@@ -93,51 +93,12 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-2">
-						<img src="assets/images/testimonials/member3.png" alt="Responsive image" class="img-rounded img-responsive">
-					</div>
-					<div class="col-md-10 col-sm-10">
-						<div class=" inner-bottom-xs">
-							<h4>Stephen</h4>
-							<span class="review-action pull-right">
-								03 Day ago &sol;   
-								<a href="#"> Repost</a> &sol;
-								<a href="#"> Reply</a>
-							</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div>
-		<div class="col-md-2 col-sm-2">
-			<img src="assets/images/testimonials/member4.png" alt="Responsive image" class="img-rounded img-responsive">
-		</div>
-		<div class="col-md-10 col-sm-10">
-			<div class="blog-comments inner-bottom-xs outer-bottom-xs">
-				<h4>Saraha Smith</h4>
-				<span class="review-action pull-right">
-					03 Day ago &sol;   
-					<a href="#"> Repost</a> &sol;
-					<a href="#"> Reply</a>
-				</span>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-			</div>
-		</div>
-		<div class="col-md-2 col-sm-2">
-			<img src="assets/images/testimonials/member1.png" alt="Responsive image" class="img-rounded img-responsive">
-		</div>
-		<div class="col-md-10 col-sm-10">
-			<div class="blog-comment inner-bottom-xs">
-				<h4>Mark Doe</h4>
-				<span class="review-action pull-right">
-					03 Day ago &sol;   
-					<a href="#"> Repost</a> &sol;
-					<a href="#"> Reply</a>
-				</span>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-			</div>
-		</div>
+
+
 		<div class="post-load-more col-md-12"><a class="btn btn-upper btn-primary" href="#">Load more</a></div>
 	</div>
 </div>					<div class="blog-write-comment outer-bottom-xs outer-top-xs">
@@ -145,30 +106,7 @@
 		<div class="col-md-12">
 			<h4>Leave A Comment</h4>
 		</div>
-		<div class="col-md-4">
-			<form class="register-form" role="form">
-				<div class="form-group">
-			    <label class="info-title" for="exampleInputName">Your Name <span>*</span></label>
-			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputName" placeholder="">
-			  </div>
-			</form>
-		</div>
-		<div class="col-md-4">
-			<form class="register-form" role="form">
-				<div class="form-group">
-			    <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
-			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" placeholder="">
-			  </div>
-			</form>
-		</div>
-		<div class="col-md-4">
-			<form class="register-form" role="form">
-				<div class="form-group">
-			    <label class="info-title" for="exampleInputTitle">Title <span>*</span></label>
-			    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputTitle" placeholder="">
-			  </div>
-			</form>
-		</div>
+	
 		<div class="col-md-12">
 			<form class="register-form" role="form">
 				<div class="form-group">
