@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Post;
 use App\Models\User;
-use App\Models\Reply;
-class Comment extends Model
+use App\Models\Comment;
+
+class Reply extends Model
 {
     use HasFactory;
     protected $guarded = [];
@@ -18,7 +19,7 @@ class Comment extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
-    public function Replies(){
-        return $this->hasMany(Reply::class);
+    public function comment(){
+        return $this->belongsTo(Comment::class);
     }
 }

@@ -34,13 +34,14 @@
 		<a href="#" class="hidden-xs"><i class="fa fa-pinterest"></i></a>
 	</div>
 </div>
+
 <div class="blog-post-author-details wow fadeInUp">
 	<div class="row">
 		<div class="col-md-2">
-			<img src="{{asset('images/blog-post/blog_big_01.jpg')}}" alt="Responsive image" class="img-circle img-responsive">
+			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-circle img-responsive">
 		</div>
 		<div class="col-md-10">
-			<h4>John Doe</h4>
+			<h4>{{$post->user->name}}</h4>
 			<div class="btn-group author-social-network pull-right">
 				<span>Follow me on</span>
 			    <button type="button" class="dropdown-toggle" data-toggle="dropdown">
@@ -59,10 +60,10 @@
 		</div>
 	</div>
 </div>
-					<div class="blog-review wow fadeInUp">
+	<div class="blog-review wow fadeInUp">
 	<div class="row">
 		<div class="col-md-12">
-			<h3 class="title-review-comments">16 comments</h3>
+			<h3 class="title-review-comments">{{$post->comments()->count()}} Comments</h3>
 		</div>
 		<div class="col-md-2 col-sm-2">
 			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-rounded img-responsive">
