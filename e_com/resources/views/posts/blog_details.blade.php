@@ -68,15 +68,17 @@
 		<div class="col-md-2 col-sm-2">
 			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-rounded img-responsive">
 		</div>
+       
+		@foreach($post->comments as $comment)
 		<div  class="col-md-10 col-sm-10 blog-comments outer-bottom-xs">
 			<div class="blog-comments inner-bottom-xs">
-				<h4 id = "b">Jone doe</h4>
+				<h4 id = "b">{{$comment->user()->name}}</h4>
 				<span class="review-action pull-right">
-					03 Day ago &sol;   
+					On {{$comment->created_at->diffForHumans()}} &sol;   
 					
 					<button type="button" onClick="MyFunction();"> Reply</button>
 				</span>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<p>{{$comment->comment}}</p>
 			</div>
 			<div id="comment_box" class="row">
 				<div class="col-md-12">
@@ -91,11 +93,13 @@
 					<button type="submit" class="btn-upper btn btn-primary btn-sm checkout-page-button">submit</button>
 				</div>
 			</div>
+			<!-- reply -->
 			<div class="blog-comments-responce outer-top-xs ">
 				<div class="row">
 					<div class="col-md-2 col-sm-2">
 						<img src="{{asset('images/testimonials/member2.png')}}" alt="Responsive image" class="img-rounded img-responsive">
 					</div>
+
 					<div class="col-md-10 col-sm-10 outer-bottom-xs">
 						<div class="blog-sub-comments inner-bottom-xs">
 							<h4>Sarah Smith</h4>
@@ -112,7 +116,7 @@
 			</div>
 		</div>
 
-
+        @endforeach
 		<div class="post-load-more col-md-12"><a class="btn btn-upper btn-primary" href="#">Load more</a></div>
 	</div>
 </div>					<div class="blog-write-comment outer-bottom-xs outer-top-xs">
