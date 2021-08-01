@@ -77,10 +77,18 @@
 				<span class="review-action pull-right">
 					On, {{$comment->created_at->diffForHumans()}}    
 					
-					<button type="button" onClick="MyFunction();"> Reply</button>
+					<!-- <button type="button" onClick="MyFunction();"> Reply</button> -->
 				</span>
 				<p>{{$comment->comment}}</p>
-			</div>
+				<!-- <p><a href="">Reply</a>|<a href="">Delete</a>|<a href="">Edit</a></p>
+				 -->
+				 <form action="{{route('comment.destroy',$comment->id)}}" method="post">
+					 @csrf
+					 @method('DELETE')
+				 <a href="" onClick="MyFunction();" class="btn-upper btn btn-info btn-sm "> Reply</a>&nbsp<a href=""  onClick="MyFunction();" class="btn-upper btn btn-warning btn-sm ">Edit</a>&nbsp <button type="button" class="btn-upper btn btn-danger btn-sm ">Delete</button>
+				</form>   
+				
+			</div> 
 	
 			<!-- reply -->
 			<div class="blog-comments-responce outer-top-xs ">
