@@ -92,7 +92,9 @@ class CommentController extends Controller
     public function destroy($id)
     {
         //
-        dd($id);
+       $comment = Comment::find($id);
+       $comment->delete();
+       return redirect()->back();
         // echo 'hi';
     }
 }

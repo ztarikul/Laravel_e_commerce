@@ -85,7 +85,7 @@
 				 <form action="{{route('comment.destroy',$comment->id)}}" method="post">
 					 @csrf
 					 @method('DELETE')
-				 <a href="" onClick="MyFunction();" class="btn-upper btn btn-info btn-sm "> Reply</a>&nbsp<a href=""  onClick="MyFunction();" class="btn-upper btn btn-warning btn-sm ">Edit</a>&nbsp <button type="button" class="btn-upper btn btn-danger btn-sm ">Delete</button>
+				 <a href="" onClick="MyFunction();" class="btn-upper btn btn-info btn-sm "> Reply</a>&nbsp<a href=""  onClick="MyFunction();" class="btn-upper btn btn-warning btn-sm ">Edit</a>&nbsp <button type="submit" class="btn-upper btn btn-danger btn-sm " onClick="return confirm('Do you want to delete your comment?')">Delete</button>
 				</form>   
 				
 			</div> 
