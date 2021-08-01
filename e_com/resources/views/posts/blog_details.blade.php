@@ -110,7 +110,7 @@
 
 
 		<!-- Reply Functions -->
-		<!-- <div id="comment_box" class="row">
+		<div id="comment_box" class="row">
 				<div class="col-md-12">
 					<form class="register-form" role="form">
 						<div class="form-group">
@@ -122,7 +122,7 @@
 				<div class="col-md-12 outer-bottom-small">
 					<button type="submit" class="btn-upper btn btn-primary btn-sm checkout-page-button">submit</button>
 				</div>
-			</div> -->
+			</div>
 
 
 
@@ -135,16 +135,19 @@
 		</div>
 	
 		<div class="col-md-12">
-			<form class="register-form" role="form">
+			<form class="register-form" role="form" action="{{route('comment.store')}}" method="post">
+				@csrf
 				<div class="form-group">
 			    <label class="info-title" for="exampleInputComments">Your Comments <span>*</span></label>
-			    <textarea class="form-control unicase-form-control" id="exampleInputComments" ></textarea>
+			    <textarea class="form-control unicase-form-control" name="comment" id="exampleInputComments" ></textarea>
+				<input type="hidden" name="post_id" value="{{$post->id}}">
 			  </div>
+			  <div class="col-md-12 outer-bottom-small m-t-20">
+			<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Submit Comment</button>
+		     </div>
 			</form>
 		</div>
-		<div class="col-md-12 outer-bottom-small m-t-20">
-			<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Submit Comment</button>
-		</div>
+		
 	</div>
 </div>
 				</div>
