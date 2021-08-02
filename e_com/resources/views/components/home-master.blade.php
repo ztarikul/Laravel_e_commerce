@@ -44,7 +44,7 @@
         <div class="cnt-account">
           <ul class="list-unstyled">
           @if (Session::has('LoggedCustomer'))
-            <li class="myaccount"><a href="#"><span>My Account</span></a></li>
+            <li class="myaccount"><a href="{{route('customer.show', Session::get('LoggedCustomer'))}}"><span>My Account</span></a></li>
             <li class="wishlist"><a href="#"><span>Wishlist</span></a></li>
             <li class="header_cart hidden-xs"><a href="#"><span>My Cart</span></a></li>
             <li class="check"><a href="#"><span>Checkout</span></a></li>

@@ -15,6 +15,7 @@ class CustomerController extends Controller
     public function index()
     {
         //
+        // return view('customer_auth.profile');
         
     }
    
@@ -132,6 +133,11 @@ class CustomerController extends Controller
     public function show($id)
     {
         //
+        // dd($id);
+        // $customer = Customer::find($id);
+        // return view('customer_auth.profile', ['customer' => $customer]);
+        return view('customer_auth.profile2');
+        
     }
 
     /**
