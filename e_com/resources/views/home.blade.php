@@ -1176,7 +1176,7 @@
                       <div class="product">
                         <div class="product-image">
                           <div class="image"> 
-                          <a href="detail.html">
+                          <a href="{{route('product.show', $product->id)}}">
                              <img src="{{asset('images/products/p1.jpg')}}" alt=""> 
                               <img src="{{asset('images/products/p1_hover.jpg')}}" alt="" class="hover-image">
                           </a> 
@@ -1188,7 +1188,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">{{$product->name}}</a></h3>
+                          <h3 class="name"><a href="">{{$product->name}}</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> {{$product->price}} BDT</span> <span class="price-before-discount">$ 800</span> </div>
