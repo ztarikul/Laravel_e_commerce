@@ -134,9 +134,9 @@ class CustomerController extends Controller
     {
         //
         // dd($id);
-        // $customer = Customer::find($id);
-        // return view('customer_auth.profile', ['customer' => $customer]);
-        return view('customer_auth.profile2');
+        $customer = Customer::find($id);
+        return view('customer_auth.profile', ['customer' => $customer]);
+        // return view('customer_auth.profile2');
         
     }
 

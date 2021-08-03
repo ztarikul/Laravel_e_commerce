@@ -9,7 +9,7 @@
 <meta name="author" content="">
 <meta name="keywords" content="MediaCenter, Template, eCommerce">
 <meta name="robots" content="all">
-<title>Marazzo premium HTML5 & CSS3 Template</title>
+<title>BuyBuzz</title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
@@ -32,8 +32,16 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+
+
 </head>
 <body class="cnt-home">
+
+
+
 <!-- ============================================== HEADER ============================================== -->
 <header class="header-style-1"> 
   
@@ -439,18 +447,18 @@
  
 </script> 
 
-<script src="js/jquery-1.11.1.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/bootstrap-hover-dropdown.min.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
-<script src="js/echo.min.js"></script> 
-<script src="js/jquery.easing-1.3.min.js"></script> 
-<script src="js/bootstrap-slider.min.js"></script> 
-<script src="js/jquery.rateit.min.js"></script> 
-<script src="js/lightbox.min.js"></script> 
-<script src="js/bootstrap-select.min.js"></script> 
-<script src="js/wow.min.js"></script> 
-<script src="js/scripts.js"></script>
+<script src="{{asset('js/jquery-1.11.1.min.js')}}"></script> 
+<script src="{{asset('js/bootstrap.min.js')}}"></script> 
+<script src="{{asset('js/bootstrap-hover-dropdown.min.js')}}"></script> 
+<script src="{{asset('js/owl.carousel.min.js')}}"></script> 
+<script src="{{asset('js/echo.min.js')}}"></script> 
+<script src="{{asset('js/jquery.easing-1.3.min.js')}}"></script> 
+<script src="{{asset('js/bootstrap-slider.min.js')}}"></script> 
+<script src="{{asset('js/jquery.rateit.min.js')}}"></script> 
+<script src="{{asset('js/lightbox.min.js')}}"></script> 
+<script src="{{asset('js/bootstrap-select.min.js')}}"></script> 
+<script src="{{asset('js/wow.min.js')}}"></script> 
+<script src="{{asset('js/scripts.js')}}"></script>
 </body>
 
 </html>

@@ -1,8 +1,6 @@
 <x-home-master>
 @section('content')
 
-<x-home-master>
-@section('content')
 
 <div class="breadcrumb">
 	<div class="container">
@@ -25,7 +23,7 @@
 <div class="blog-post-author-details wow fadeInUp">
 	<div class="row">
 		<div class="col-md-2">
-			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-circle img-responsive">
+			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-circle img-responsive" width="200%">
             
 		</div>
         
@@ -54,9 +52,7 @@
 
 
     
-    
-@endsection
-</x-home-master>
+
 
 
 

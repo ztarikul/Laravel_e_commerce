@@ -50,7 +50,8 @@ class ProductController extends Controller
         //
         // dd($id);
         $product = Product::find($id);
-        return view('product.detail',['product'=> $product ]);
+        
+        return view('product.detail', ['product'=> $product ]);
     }
 
     /**
