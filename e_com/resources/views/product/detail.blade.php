@@ -33,52 +33,24 @@
             </div><!-- /.single-product-gallery-item -->
 
             <div class="single-product-gallery-item" id="slide2">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p2.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p2.jpg" />
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('images/products/p2.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p2.jpg')}}" />
                 </a>
             </div><!-- /.single-product-gallery-item -->
 
             <div class="single-product-gallery-item" id="slide3">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p3.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p3.jpg" />
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('images/products/p3.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p3.jpg')}}" />
                 </a>
             </div><!-- /.single-product-gallery-item -->
 
             <div class="single-product-gallery-item" id="slide4">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p4.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p4.jpg" />
+                <a data-lightbox="image-1" data-title="Gallery" href="{{asset('images/products/p4.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p4.jpg')}}" />
                 </a>
             </div><!-- /.single-product-gallery-item -->
 
-            <div class="single-product-gallery-item" id="slide5">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p5.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p5.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide6">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p6.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p6.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide7">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p7.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p7.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide8">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p8.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p8.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide9">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p9.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p9.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
+            
 
         </div><!-- /.single-product-slider -->
 
@@ -109,36 +81,7 @@
                         <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p4.jpg')}}" />
                     </a>
                 </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="5" href="#slide5">
-                        <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p5.jpg')}}" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="6" href="#slide6">
-                        <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p6.jpg')}}" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="7" href="#slide7">
-                        <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p7.jpg')}}" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="8" href="#slide8">
-                        <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p8.jpg')}}" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="9" href="#slide9">
-                        <img class="img-responsive" alt="" src="{{asset('images/blank.gif')}}" data-echo="{{asset('images/products/p9.jpg')}}" />
-                    </a>
-                </div>
+               
             </div><!-- /#owl-single-product-thumbnails -->
 
             
@@ -146,10 +89,11 @@
         </div><!-- /.gallery-thumbs -->
 
     </div><!-- /.single-product-gallery -->
-</div><!-- /.gallery-holder -->        			
+</div><!-- /.gallery-holder -->  
+              			
 					<div class='col-sm-12 col-md-8 col-lg-8 product-info-block'>
 						<div class="product-info">
-							<h1 class="name">Floral Print Buttoned</h1>
+							<h1 class="name">{{$product->name}}</h1>
 							
 							<div class="rating-reviews m-t-20">
 								<div class="row">
@@ -176,7 +120,11 @@
 									</div>
 									<div class="pull-left">
 										<div class="stock-box">
+                      @if($product->quantity > 0)
 											<span class="value">In Stock</span>
+                      @else
+                      <span class="value">Out of Stock</span>
+                      @endif
 										</div>	
 									</div>
                                     </div>
@@ -184,8 +132,7 @@
 							</div><!-- /.stock-container -->
 
 							<div class="description-container m-t-20">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<p>{{$product->content}}</p>
 							</div><!-- /.description-container -->
 
 							<div class="price-container info-container m-t-30">
@@ -194,7 +141,7 @@
 
 									<div class="col-sm-6 col-xs-6">
 										<div class="price-box">
-											<span class="price">$800.00</span>
+											<span class="price">{{$product->price}} BDT</span>
 											<span class="price-strike">$900.00</span>
 										</div>
 									</div>
@@ -220,17 +167,17 @@
 								<div class="row">
 									
 									<div class="qty">
-										<span class="label">Qty :</span>
+										<span class="label">Qty:</span>
 									</div>
 									
 									<div class="qty-count">
 										<div class="cart-quantity">
 											<div class="quant-input">
-								                <div class="arrows">
+								                <!-- <div class="arrows">
 								                  <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
 								                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
-								                </div>
-								                <input type="text" value="1">
+								                </div> -->
+								                <input type="number" value="1">
 							              </div>
 							            </div>
 									</div>
@@ -268,7 +215,7 @@
 								
 								<div id="description" class="tab-pane in active">
 									<div class="product-tab">
-										<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										<p class="text">{{$product->description}}</p>
 									</div>	
 								</div><!-- /.tab-pane -->
 
@@ -292,46 +239,7 @@
 										<div class="product-add-review">
 											<h4 class="title">Write your own review</h4>
 											<div class="review-table">
-												<div class="table-responsive">
-													<table class="table">	
-														<thead>
-															<tr>
-																<th class="cell-label">&nbsp;</th>
-																<th>1 star</th>
-																<th>2 stars</th>
-																<th>3 stars</th>
-																<th>4 stars</th>
-																<th>5 stars</th>
-															</tr>
-														</thead>	
-														<tbody>
-															<tr>
-																<td class="cell-label">Quality</td>
-																<td><input type="radio" name="quality" class="radio" value="1"></td>
-																<td><input type="radio" name="quality" class="radio" value="2"></td>
-																<td><input type="radio" name="quality" class="radio" value="3"></td>
-																<td><input type="radio" name="quality" class="radio" value="4"></td>
-																<td><input type="radio" name="quality" class="radio" value="5"></td>
-															</tr>
-															<tr>
-																<td class="cell-label">Price</td>
-																<td><input type="radio" name="quality" class="radio" value="1"></td>
-																<td><input type="radio" name="quality" class="radio" value="2"></td>
-																<td><input type="radio" name="quality" class="radio" value="3"></td>
-																<td><input type="radio" name="quality" class="radio" value="4"></td>
-																<td><input type="radio" name="quality" class="radio" value="5"></td>
-															</tr>
-															<tr>
-																<td class="cell-label">Value</td>
-																<td><input type="radio" name="quality" class="radio" value="1"></td>
-																<td><input type="radio" name="quality" class="radio" value="2"></td>
-																<td><input type="radio" name="quality" class="radio" value="3"></td>
-																<td><input type="radio" name="quality" class="radio" value="4"></td>
-																<td><input type="radio" name="quality" class="radio" value="5"></td>
-															</tr>
-														</tbody>
-													</table><!-- /.table .table-bordered -->
-												</div><!-- /.table-responsive -->
+											
 											</div><!-- /.review-table -->
 											
 											<div class="review-form">
@@ -340,10 +248,7 @@
 														
 														<div class="row">
 															<div class="col-sm-6">
-																<div class="form-group">
-																	<label for="exampleInputName">Your Name <span class="astk">*</span></label>
-																	<input type="text" class="form-control txt" id="exampleInputName" placeholder="">
-																</div><!-- /.form-group -->
+															
 																<div class="form-group">
 																	<label for="exampleInputSummary">Summary <span class="astk">*</span></label>
 																	<input type="text" class="form-control txt" id="exampleInputSummary" placeholder="">
