@@ -27,6 +27,7 @@ Route::get('/covid19', [HomeController::class, 'covid_form'])->name('covid.form'
 Route::post('/covid19_tracker', [HomeController::class, 'covid_tracker'])->name('covid.tracker');
 
 
+
 Route::resource('customer', CustomerController::class);
 Route::get('/customer_login','CustomerController@login')->name('customer.login');
 Route::post('/customer_loginAuthenticate','CustomerController@customer_loginAuthenticate')->name('customer.loginAuthenticate');

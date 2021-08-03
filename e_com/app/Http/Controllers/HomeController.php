@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\Post;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
@@ -26,7 +27,8 @@ class HomeController extends Controller
     public function index()
     { 
         $posts = Post::orderBy('id', 'desc')->limit('6')->get();
-        return view('home',['posts' => $posts]);
+        $products = Product::orderBy('id','desc')->limit('10')->get();
+        return view('home',['posts' => $posts , 'products' => $products]);
     }
 
     public function covid_form(){
@@ -41,4 +43,5 @@ class HomeController extends Controller
         return view('covid_tracker', ['data' => $data]);
         // dd($data);
     }
+   
 }
