@@ -254,29 +254,15 @@
 														</thead>	
 														<tbody>
 															<tr>
-																<td class="cell-label">Quality</td>
+																<td class="cell-label">Review</td>
 																<td><input type="radio" name="quality" class="radio" value="1"></td>
 																<td><input type="radio" name="quality" class="radio" value="2"></td>
 																<td><input type="radio" name="quality" class="radio" value="3"></td>
 																<td><input type="radio" name="quality" class="radio" value="4"></td>
 																<td><input type="radio" name="quality" class="radio" value="5"></td>
 															</tr>
-															<tr>
-																<td class="cell-label">Price</td>
-																<td><input type="radio" name="quality" class="radio" value="1"></td>
-																<td><input type="radio" name="quality" class="radio" value="2"></td>
-																<td><input type="radio" name="quality" class="radio" value="3"></td>
-																<td><input type="radio" name="quality" class="radio" value="4"></td>
-																<td><input type="radio" name="quality" class="radio" value="5"></td>
-															</tr>
-															<tr>
-																<td class="cell-label">Value</td>
-																<td><input type="radio" name="quality" class="radio" value="1"></td>
-																<td><input type="radio" name="quality" class="radio" value="2"></td>
-																<td><input type="radio" name="quality" class="radio" value="3"></td>
-																<td><input type="radio" name="quality" class="radio" value="4"></td>
-																<td><input type="radio" name="quality" class="radio" value="5"></td>
-															</tr>
+															
+															
 														</tbody>
 													</table><!-- /.table .table-bordered -->
 												</div><!-- /.table-responsive -->
