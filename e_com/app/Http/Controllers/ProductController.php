@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\ProductReview;
 
 class ProductController extends Controller
 {
@@ -52,6 +53,7 @@ class ProductController extends Controller
         // dd($id);
         $product = Product::find($id);
         
+        
         return view('product.detail', ['product'=> $product ]);
     }
 
@@ -88,4 +90,23 @@ class ProductController extends Controller
     {
         //
     }
+
+
+    public function product_review_store(Request $request)
+    {
+        // //
+        // dd($request);
+        
+        $inputs = $request->validate([
+            'summary'=> 'required',
+            'review_body'=> 'required'
+       ]);
+       $inputs['product_id'] = $request['product_id'];
+       $inputs['rating'] = $request['rating'];
+       $product_review = new ProductReview($inputs);
+       $product_review->save();
+        return redirect()->back();
+    }
+
+    
 }

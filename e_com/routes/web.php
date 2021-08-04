@@ -39,6 +39,7 @@ Route::get('/customer_logout','CustomerController@customer_logout')->name('custo
 Route::resource('post', PostController::class);
 Route::resource('comment',CommentController::class);
 Route::resource('product',ProductController::class);
+Route::post('/product_review','ProductController@product_review_store')->name('product.product_review');
 
 
 
