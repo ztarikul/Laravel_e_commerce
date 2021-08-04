@@ -28,7 +28,7 @@
 		</div>
         
 		<div class="col-md-9">
-			<h4>{{$customer->name}}</h4>
+			<h4>{{$customer->f_name}} {{$customer->l_name}}</h4>
 	
             <p>Email: {{$customer->email}} </p>
             <p>Address: {{$customer->address}}</p>

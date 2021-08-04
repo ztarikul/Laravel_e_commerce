@@ -7,7 +7,8 @@
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="#">Home</a></li>
-				<li class='active'>Profile</li>
+				<li class='#'>Profile</li>
+				
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -53,43 +54,16 @@
 			<label >Phone</label>
 				<input type="text" name="phone" class="form-control" value="{{$customer->phone}}">
 			</div>
-			<p><button type="button" class="btn btn-dark btn-sm" onClick="changePassword()"; >Change Password</button></p>
+			<p><a href="#">Change Password</a></p>
             
             <button type="submit" class="btn btn-primary btn-sm">Edit Profile</button>
-</form>
-
-			<form >
-			<div id="change_password">
-			<div class="form-group" >
-			<label >Old Password</label>
-				<input type="password" name="old_password" class="form-control">
-			</div>
-			<div class="form-group" >
-			<label >New Password</label>
-				<input type="password" name="password" class="form-control">
-			</div>
-			<div class="form-group" >
-			<label >Confirm New Password</label>
-				<input type="password" name="con_password" class="form-control">
-			</div>
-			</div>
-			</form>
-
-
 		</div>
 	</div>
 </div>
 
-
+</form>
 	
-<script>
-  $("#change_password").hide();
-  function changePassword(){
 
-    $("#change_password").toggle();
-  }
- 
-</script> 
 
 
                 

@@ -164,7 +164,15 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+            'email' => 'required|unique:customers',
+            
+           ]);
+
+        $customer = Customer::find($id);
+        $customer->update($request->all());
+        return redirect()->back();
     }
 
     /**
