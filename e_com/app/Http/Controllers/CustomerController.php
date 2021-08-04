@@ -60,7 +60,8 @@ class CustomerController extends Controller
         // dd($request);
         $request->validate([
          'email' => 'required|unique:customers',
-         'name' => 'required',
+         'f_name' => 'required',
+         'l_name' => 'required',
          'phone' =>'required|numeric|min:11',
          'password' => 'required|confirmed|min:6|max:16',
           
@@ -68,7 +69,8 @@ class CustomerController extends Controller
         // dd($request);
         $customer = new Customer;
         $customer->email = $request->email;
-        $customer->name = $request->name;
+        $customer->f_name = $request->f_name;
+        $customer->l_name = $request->l_name;
         $customer->phone = $request->phone;
         $customer->password = Hash::make($request->password);
         $query = $customer->save();

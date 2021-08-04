@@ -50,9 +50,14 @@
 			<span class="text-danger">@error('email') {{ $message }} @enderror</span>
 	  	</div>
         <div class="form-group">
-		    <label class="info-title" for="exampleInputEmail1">Name <span>*</span></label>
-		    <input type="text" name="name" class="form-control unicase-form-control text-input" id="exampleInputEmail1" value="{{old('name')}}" >
-			<span class="text-danger">@error('name') {{ $message }} @enderror</span>
+		    <label class="info-title" for="exampleInputEmail1">First Name <span>*</span></label>
+		    <input type="text" name="f_name" class="form-control unicase-form-control text-input" id="exampleInputEmail1" value="{{old('name')}}" >
+			<span class="text-danger">@error('f_name') {{ $message }} @enderror</span>
+		</div>
+        <div class="form-group">
+		    <label class="info-title" for="exampleInputEmail1">Last Name <span>*</span></label>
+		    <input type="text" name="l_name" class="form-control unicase-form-control text-input" id="exampleInputEmail1" value="{{old('name')}}" >
+			<span class="text-danger">@error('l_name') {{ $message }} @enderror</span>
 		</div>
         <div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
