@@ -136,7 +136,7 @@ class CustomerController extends Controller
         // dd($id);
         $customer = Customer::find($id);
         return view('customer_auth.profile', ['customer' => $customer]);
-        // return view('customer_auth.profile2');
+        
         
     }
 
@@ -149,6 +149,8 @@ class CustomerController extends Controller
     public function edit($id)
     {
         //
+        $customer = Customer::find($id);
+        return view('customer_auth.profile_edit', ['customer' => $customer]);
     }
 
     /**
@@ -180,4 +182,6 @@ class CustomerController extends Controller
             return redirect()->route('home');
         }
     }
+
+
 }

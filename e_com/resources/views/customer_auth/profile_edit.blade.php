@@ -24,15 +24,34 @@
 	<div class="row">
 		<div class="col-md-3">
 			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-circle img-responsive">
+			<input type="file" value="Upload Image">
             
 		</div>
         
 		<div class="col-md-9">
-			<h4>{{$customer->name}}</h4>
+			
 	
-            <p>Email: {{$customer->email}} </p>
-            <p>Address: {{$customer->address}}</p>
-            <p>Phone: {{$customer->phone}}</p>
+            <div class="form-group" >
+			<label>First Name</label>
+				<input type="text" name="f_name" class="form-control" value="{{$customer->email}}">
+			</div>
+            <div class="form-group" >
+			<label>Email</label>
+				<input type="text" name="l_name" class="form-control" value="{{$customer->email}}">
+			</div>
+            <div class="form-group" >
+			<label>Email</label>
+				<input type="email" name="email" class="form-control" value="{{$customer->email}}">
+			</div>
+			<div class="form-group">
+			<label>Address</label>
+				<textarea name="address"  class="form-control" cols="20" rows="10" >{{$customer->address}}</textarea>
+			</div>
+            <div class="form-group" >
+			<label >Phone</label>
+				<input type="text" name="phone" class="form-control" value="{{$customer->phone}}">
+			</div>
+			<p><a href="#">Change Password</a></p>
             
             <a href="{{route('customer.edit', $customer->id)}}" class="btn btn-primary btn-sm">Edit Profile</a>
 		</div>
