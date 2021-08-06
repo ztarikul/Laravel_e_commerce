@@ -244,6 +244,9 @@
 											<h4 class="title">Write your own review</h4>
 											<div class="review-table">
 												<div class="table-responsive">
+												<form action="{{route('product.product_review')}}" method="post" class="cnt-form">
+														@csrf
+														<input type="hidden" name="product_id" value="{{$product->id}}">
 													<table class="table">	
 														<thead>
 															<tr>
@@ -258,11 +261,11 @@
 														<tbody>
 															<tr>
 																<td class="cell-label">Review</td>
-																<td><input type="radio" name="quality" class="radio" value="1"></td>
-																<td><input type="radio" name="quality" class="radio" value="2"></td>
-																<td><input type="radio" name="quality" class="radio" value="3"></td>
-																<td><input type="radio" name="quality" class="radio" value="4"></td>
-																<td><input type="radio" name="quality" class="radio" value="5"></td>
+																<td><input type="radio" name="rating" class="radio" value="1"></td>
+																<td><input type="radio" name="rating" class="radio" value="2"></td>
+																<td><input type="radio" name="rating" class="radio" value="3"></td>
+																<td><input type="radio" name="rating" class="radio" value="4"></td>
+																<td><input type="radio" name="rating" class="radio" value="5"></td>
 															</tr>
 															
 															
@@ -273,27 +276,27 @@
 											
 											<div class="review-form">
 												<div class="form-container">
-													<form class="cnt-form">
+													
 														
 														<div class="row">
 															<div class="col-sm-6">
 															
 																<div class="form-group">
 																	<label for="exampleInputSummary">Summary <span class="astk">*</span></label>
-																	<input type="text" class="form-control txt" id="exampleInputSummary" placeholder="">
+																	<input type="text" name="summary" class="form-control txt" id="exampleInputSummary" placeholder="">
 																</div><!-- /.form-group -->
 															</div>
 
 															<div class="col-md-6">
 																<div class="form-group">
 																	<label for="exampleInputReview">Review <span class="astk">*</span></label>
-																	<textarea class="form-control txt txt-review" id="exampleInputReview" rows="4" placeholder=""></textarea>
+																	<textarea name="review_body" class="form-control txt txt-review" id="exampleInputReview" rows="4" placeholder=""></textarea>
 																</div><!-- /.form-group -->
 															</div>
 														</div><!-- /.row -->
 														
 														<div class="action text-right">
-															<button class="btn btn-primary btn-upper">SUBMIT REVIEW</button>
+															<button type="submit" name="submit" class="btn btn-primary btn-upper">SUBMIT REVIEW</button>
 														</div><!-- /.action -->
 
 													</form><!-- /.cnt-form -->
