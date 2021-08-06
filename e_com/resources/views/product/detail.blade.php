@@ -103,13 +103,14 @@
 									</div>
 									<div class="pull-left">
 										<div class="reviews">
-											<a href="#" class="lnk">(13 Reviews)</a>
+											<a href="#" class="lnk">({{$product->reviews()->count()}} Reviews)</a>
+											
 										</div>
 									</div>
                                     </div>
 								</div><!-- /.row -->		
 							</div><!-- /.rating-reviews -->
-
+							
 							<div class="stock-container info-container m-t-10">
 								<div class="row">
                                 <div class="col-lg-12">
@@ -227,8 +228,10 @@
 
 											<div class="reviews">
 												<div class="review">
-													<div class="review-title"><span class="summary">We love this product</span><span class="date"><i class="fa fa-calendar"></i><span>1 days ago</span></span></div>
-													<div class="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam suscipit."</div>
+													@foreach($product->reviews as $review)
+													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date"><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
+													<div class="text">{{$review->review_body}}</div>
+													@endforeach
 																										</div>
 											
 											</div><!-- /.reviews -->
