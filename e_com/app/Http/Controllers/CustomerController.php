@@ -164,14 +164,30 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-        $request->validate([
-            'email' => 'required',
-            
-           ]);
-
+        // dd($request);
         $customer = Customer::find($id);
-        $customer->update($request->all());
+        
+
+        if(request('old_password')){
+            $request->validate([
+                'password' => 'required|confirmed|min:6|max:16',
+            ]);
+            
+            if(Hash::check($request['old_password'], $customer->password)){
+                $customer->password =  Hash::make($request->password);
+                $query = $customer->update();
+                if($query){
+                    return back()->with('customerPasswordSuccess','Your Password has been  successfully changed');
+                }
+                   
+            }
+        }
+        else{
+            $query = $customer->update($request->all());
+            if($query){
+                return back()->with('customeUpdateSuccess','Your Profile has been  successfully updated');
+            }
+        }
         return redirect()->back();
     }
 
@@ -192,6 +208,8 @@ class CustomerController extends Controller
             return redirect()->route('home');
         }
     }
+
+
 
 
 }

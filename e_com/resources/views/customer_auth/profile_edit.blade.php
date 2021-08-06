@@ -26,12 +26,17 @@
 	<div class="row">
 		<div class="col-md-3">
 			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-circle img-responsive">
-			<input type="file" name="image" value="Upload Image">
+			<input type="file" name="image">
             
 		</div>
         
 		<div class="col-md-9">
 			
+			@if(Session::get('customeUpdateSuccess'))
+			<div class="alert alert-success">
+				{{Session::get('customeUpdateSuccess')}}
+			</div>
+			@endif
 	
             <div class="form-group" >
 			<label>First Name</label>
@@ -43,7 +48,7 @@
 			</div>
             <div class="form-group" >
 			<label>Email</label>
-				<input type="email" name="email" class="form-control" value="{{$customer->email}}">
+				<p><b>{{$customer->email}}</b></p>
 			</div>
 			<div class="form-group">
 			<label>Address</label>
@@ -55,24 +60,41 @@
 			</div>
 			<p><button type="button" class="btn btn-dark btn-sm" onClick="changePassword()"; >Change Password</button></p>
             
-            <button type="submit" class="btn btn-primary btn-sm">Edit Profile</button>
+            <button id="edit_profile" type="submit" class="btn btn-primary btn-sm">Edit Profile</button>
 </form>
 
-			<form >
+			<form method="post" action="{{route('customer.update', $customer->id)}}">
+				@csrf
+				@method('PATCH')
+
+			
+
 			<div id="change_password">
+			@if(Session::get('customerPasswordSuccess'))
+			<div class="alert alert-success">
+				{{Session::get('customerPasswordSuccess')}}
+			</div>
+			@endif
+		
+
 			<div class="form-group" >
 			<label >Old Password</label>
-				<input type="password" name="old_password" class="form-control">
+				<input type="password" name="old_password" class="form-control" required>
+
 			</div>
 			<div class="form-group" >
 			<label >New Password</label>
-				<input type="password" name="password" class="form-control">
+				<input type="password" name="password" class="form-control" required>
+				<span class="text-danger">@error('password') {{ $message }} @enderror</span>
 			</div>
 			<div class="form-group" >
 			<label >Confirm New Password</label>
-				<input type="password" name="con_password" class="form-control">
+				<input type="password" name="password_confirmation" class="form-control" required>
+				<span class="text-danger">@error('confirm_password') {{ $message }} @enderror</span>
 			</div>
+			<button type="submit" class="btn btn-success btn-sm">Change</button>
 			</div>
+			
 			</form>
 
 
@@ -85,8 +107,9 @@
 <script>
   $("#change_password").hide();
   function changePassword(){
-
+	
     $("#change_password").toggle();
+	
   }
  
 </script> 

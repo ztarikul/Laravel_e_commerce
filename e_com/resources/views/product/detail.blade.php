@@ -98,12 +98,12 @@
 							<div class="rating-reviews m-t-20">
 								<div class="row">
                                 <div class="col-lg-12">
-									<!-- <div class="pull-left">
+									<div class="pull-left">
 										<div class="rating rateit-small"></div>
-									</div> -->
+									</div>
 									<div class="pull-left">
 										<div class="reviews">
-											<a href="#" class="lnk">{{$product->reviews()->count()}} reviews</a>
+											<a href="#" class="lnk">(13 Reviews)</a>
 										</div>
 									</div>
                                     </div>
@@ -177,7 +177,7 @@
 								                  <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
 								                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
 								                </div> -->
-								                <input type="number" value="1">
+								                <input type="number" value="1" min="1">
 							              </div>
 							            </div>
 									</div>
@@ -221,34 +221,26 @@
 
 								<div id="review" class="tab-pane">
 									<div class="product-tab">
-																
+																				
 										<div class="product-reviews">
 											<h4 class="title">Customer Reviews</h4>
-											@foreach($product->reviews() as $review)	
+
 											<div class="reviews">
-											
 												<div class="review">
-												
-													<div class="review-title">
-														
-													<span class="summary">{{$review->summary}}</span><span class="date"><i class="fa fa-calendar"></i><span>
-														{{$review->created_at->diffForHumans()}}  days ago</span></span></div>
-													<div class="text">{{$review->review_body}}</div>
-													</div>
-													
-	
+													<div class="review-title"><span class="summary">We love this product</span><span class="date"><i class="fa fa-calendar"></i><span>1 days ago</span></span></div>
+													<div class="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam suscipit."</div>
+																										</div>
+											
 											</div><!-- /.reviews -->
-											@endforeach
 										</div><!-- /.product-reviews -->
-									
+										
+
 										
 											
 										<div class="product-add-review">
 											<h4 class="title">Write your own review</h4>
 											<div class="review-table">
 												<div class="table-responsive">
-												<form class="cnt-form"  action="{{route('product.product_review')}}" method="post" enctype="multipart/form_data">
-												@csrf
 													<table class="table">	
 														<thead>
 															<tr>
@@ -263,11 +255,11 @@
 														<tbody>
 															<tr>
 																<td class="cell-label">Review</td>
-																<td><input type="radio" name="rating" class="radio" value="1"></td>
-																<td><input type="radio" name="rating" class="radio" value="2"></td>
-																<td><input type="radio" name="rating" class="radio" value="3"></td>
-																<td><input type="radio" name="rating" class="radio" value="4"></td>
-																<td><input type="radio" name="rating" class="radio" value="5"></td>
+																<td><input type="radio" name="quality" class="radio" value="1"></td>
+																<td><input type="radio" name="quality" class="radio" value="2"></td>
+																<td><input type="radio" name="quality" class="radio" value="3"></td>
+																<td><input type="radio" name="quality" class="radio" value="4"></td>
+																<td><input type="radio" name="quality" class="radio" value="5"></td>
 															</tr>
 															
 															
@@ -278,33 +270,27 @@
 											
 											<div class="review-form">
 												<div class="form-container">
-													
+													<form class="cnt-form">
 														
 														<div class="row">
 															<div class="col-sm-6">
 															
 																<div class="form-group">
 																	<label for="exampleInputSummary">Summary <span class="astk">*</span></label>
-																	<input type="text" name="summary" class="form-control txt" id="exampleInputSummary" placeholder="">
-																</div>
-																<input type="hidden" name="product_id" value="{{$product->id}}"class="form-control txt" id="exampleInputSummary" placeholder="">
-																<!-- /.form-group -->
-																<div class="form-group">
-																	<label for="exampleInputSummary">Image</label>
-																	<input type="file" name="image1" class="form-control txt" id="exampleInputSummary" placeholder="">
-																</div>
+																	<input type="text" class="form-control txt" id="exampleInputSummary" placeholder="">
+																</div><!-- /.form-group -->
 															</div>
 
 															<div class="col-md-6">
 																<div class="form-group">
 																	<label for="exampleInputReview">Review <span class="astk">*</span></label>
-																	<textarea class="form-control txt txt-review" name="review_body" id="exampleInputReview" rows="4" placeholder=""></textarea>
+																	<textarea class="form-control txt txt-review" id="exampleInputReview" rows="4" placeholder=""></textarea>
 																</div><!-- /.form-group -->
 															</div>
 														</div><!-- /.row -->
 														
 														<div class="action text-right">
-															<button type="submit" name="submit" class="btn btn-primary btn-upper">SUBMIT REVIEW</button>
+															<button class="btn btn-primary btn-upper">SUBMIT REVIEW</button>
 														</div><!-- /.action -->
 
 													</form><!-- /.cnt-form -->
@@ -316,7 +302,33 @@
 							        </div><!-- /.product-tab -->
 								</div><!-- /.tab-pane -->
 
+								<div id="tags" class="tab-pane">
+									<div class="product-tag">
+										
+										<h4 class="title">Product Tags</h4>
+										<form class="form-inline form-cnt">
+											<div class="form-container">
+									
+												<div class="form-group">
+													<label for="exampleInputTag">Add Your Tags: </label>
+													<input type="email" id="exampleInputTag" class="form-control txt">
+													
 
+												</div>
+
+												<button class="btn btn-upper btn-primary" type="submit">ADD TAGS</button>
+											</div><!-- /.form-container -->
+										</form><!-- /.form-cnt -->
+
+										<form class="form-inline form-cnt">
+											<div class="form-group">
+												<label>&nbsp;</label>
+												<span class="text col-md-offset-3">Use spaces to separate tags. Use single quotes (') for phrases.</span>
+											</div>
+										</form><!-- /.form-cnt -->
+
+									</div><!-- /.product-tab -->
+								</div><!-- /.tab-pane -->
 
 							</div><!-- /.tab-content -->
 						</div><!-- /.col -->
