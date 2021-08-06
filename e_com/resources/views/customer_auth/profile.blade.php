@@ -26,8 +26,11 @@
 			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-circle img-responsive">
             
 		</div>
+		<div class="col-md-1">
+
+		</div>
         
-		<div class="col-md-9">
+		<div class="col-md-8">
 			<h4>{{$customer->f_name}} {{$customer->l_name}}</h4>
 	
             <p>Email: {{$customer->email}} </p>

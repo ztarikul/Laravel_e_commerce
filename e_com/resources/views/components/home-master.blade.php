@@ -53,34 +53,21 @@
           @if (Session::has('LoggedCustomer'))
 
 
-         
-   <div class="dropdown show" >
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
-  {{Session::get('LoggedCustomerName')}}'s Account
-  </a>
- <a href="{{route('customer.logout')}}" style="color:white;"><span>Logout</span></a>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-  <li class="dropdown-item"><a href="{{route('customer.show', Session::get('LoggedCustomer'))}}"><span>Manage MY Account</span></a></li>
-  <li class="dropdown-item"><a href="#"><span>My Wishlist</span></a></li>
-  <li class="dropdown-item"><a href="#"><span>My Review</span></a></li>
-  <li class="dropdown-item"><a href="#"><span>My Cart</span></a></li>
-  <li class="dropdown-item"><a href="#"><span>Checkout</span></a></li>
-  </div>
-</div>
-@else
-
-<!-- 
-
-
-            <li class="myaccount"><a href="{{route('customer.show', Session::get('LoggedCustomer'))}}"><span>{{Session::get('LoggedCustomerName')}}'s Account</span></a></li>
-            <li class="wishlist"><a href="#"><span>Wishlist</span></a></li>
-            <li class="header_cart hidden-xs"><a href="#"><span>My Cart</span></a></li>
-            <li class="check"><a href="#"><span>Checkout</span></a></li>
-            <li class="login"><a href="{{route('customer.logout')}}"><span>Logout</span></a></li>
-             -->
-         
-          
-            
+                  
+            <div class="dropdown show" >
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+            {{Session::get('LoggedCustomerName')}}'s Account
+            </a>
+          <a href="{{route('customer.logout')}}" style="color:white;"><span>Logout</span></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li class="dropdown-item"><a href="{{route('customer.show', Session::get('LoggedCustomer'))}}"><span>Manage Account</span></a></li>
+            <li class="dropdown-item"><a href="#"><span>My Wishlist</span></a></li>
+            <li class="dropdown-item"><a href="#"><span>My Review</span></a></li>
+            <li class="dropdown-item"><a href="#"><span>My Cart</span></a></li>
+            <li class="dropdown-item"><a href="#"><span>Checkout</span></a></li>
+            </div>
+          </div>
+          @else
             <li class="login"><a href="{{route('customer.login')}}"><span>Login</span></a></li>
             <li class="login"><a href="{{route('customer.registration')}}"><span>Registration</span></a></li>
           @endif
