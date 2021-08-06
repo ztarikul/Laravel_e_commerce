@@ -174,10 +174,7 @@
 									<div class="qty-count">
 										<div class="cart-quantity">
 											<div class="quant-input">
-								                <!-- <div class="arrows">
-								                  <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
-								                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
-								                </div> -->
+								            
 								                <input type="number" value="1" min="1">
 							              </div>
 							            </div>
@@ -240,7 +237,7 @@
 
 										
 											
-										<div class="product-add-review">
+										<!-- <div class="product-add-review">
 											<h4 class="title">Write your own review</h4>
 											<div class="review-table">
 												<div class="table-responsive">
@@ -270,9 +267,9 @@
 															
 															
 														</tbody>
-													</table><!-- /.table .table-bordered -->
-												</div><!-- /.table-responsive -->
-											</div><!-- /.review-table -->
+													</table>
+												</div>
+											</div>
 											
 											<div class="review-form">
 												<div class="form-container">
@@ -284,26 +281,26 @@
 																<div class="form-group">
 																	<label for="exampleInputSummary">Summary <span class="astk">*</span></label>
 																	<input type="text" name="summary" class="form-control txt" id="exampleInputSummary" placeholder="">
-																</div><!-- /.form-group -->
+																</div>
 															</div>
 
 															<div class="col-md-6">
 																<div class="form-group">
 																	<label for="exampleInputReview">Review <span class="astk">*</span></label>
 																	<textarea name="review_body" class="form-control txt txt-review" id="exampleInputReview" rows="4" placeholder=""></textarea>
-																</div><!-- /.form-group -->
+																</div>
 															</div>
-														</div><!-- /.row -->
+														</div>
 														
 														<div class="action text-right">
 															<button type="submit" name="submit" class="btn btn-primary btn-upper">SUBMIT REVIEW</button>
-														</div><!-- /.action -->
+														</div>
 
-													</form><!-- /.cnt-form -->
-												</div><!-- /.form-container -->
-											</div><!-- /.review-form -->
+													</form>
+												</div>
+											</div>
 
-										</div><!-- /.product-add-review -->										
+										</div>									 -->
 										
 							        </div><!-- /.product-tab -->
 								</div><!-- /.tab-pane -->

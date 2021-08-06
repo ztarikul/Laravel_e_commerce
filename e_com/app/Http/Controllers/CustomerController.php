@@ -106,9 +106,12 @@ class CustomerController extends Controller
         if($customer){
            if(Hash::check($request['password'], $customer->password)){
              $request->session()->put('LoggedCustomer',$customer->id);
+             $request->session()->put('LoggedCustomerName',$customer->f_name);
+            //  dd($request);
              return redirect()->route('home');
 
            }
+       
          else{
              return back()->with('fail','Invalid Password');
          }
@@ -205,6 +208,7 @@ class CustomerController extends Controller
     {
         if(session()->has('LoggedCustomer')){
             session()->pull('LoggedCustomer');
+            session()->pull('LoggedCustomerName');
             return redirect()->route('home');
         }
     }
