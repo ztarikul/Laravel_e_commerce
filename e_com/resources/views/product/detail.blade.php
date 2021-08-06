@@ -204,7 +204,7 @@
 							<ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
 								<li class="active"><a data-toggle="tab" href="#description">DESCRIPTION</a></li>
 								<li><a data-toggle="tab" href="#review">REVIEW</a></li>
-								<li><a data-toggle="tab" href="#tags">TAGS</a></li>
+								<li><a data-toggle="tab" href="#tags">Q&A</a></li>
 							</ul><!-- /.nav-tabs #product-tabs -->
 						</div>
 						<div class="col-sm-12 col-md-9 col-lg-9">
@@ -226,7 +226,7 @@
 											<div class="reviews">
 												<div class="review">
 													@foreach($product->reviews as $review)
-													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date"><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
+													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date float-right" ><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
 													<div class="text">{{$review->review_body}}</div>
 													@endforeach
 																										</div>
@@ -308,25 +308,42 @@
 								<div id="tags" class="tab-pane">
 									<div class="product-tag">
 										
-										<h4 class="title">Product Tags</h4>
+										<!-- <h4 class="title">Product Tags</h4> -->
 										<form class="form-inline form-cnt">
 											<div class="form-container">
 									
-												<div class="form-group">
-													<label for="exampleInputTag">Add Your Tags: </label>
-													<input type="email" id="exampleInputTag" class="form-control txt">
-													
+											<div class="questions" >
+												<div class="question" style="background-color:#f3f3f3">
+													@foreach($product->reviews as $review)
+													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date"><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
+													<div class="text">{{$review->review_body}}</div>
+													@endforeach
+													</div>
+											
+											</div><!-- /.reviews -->
+										</div>
 
+
+
+
+
+
+
+
+												<div class="form-group">
+													<label for="exampleInputTag">Write Your Question: </label>
+													<textarea name="question_body" id="" cols="30" rows="1"></textarea> 
+													
 												</div>
 
-												<button class="btn btn-upper btn-primary" type="submit">ADD TAGS</button>
+												<button class="btn btn-upper btn-primary" type="submit">Submit</button>
 											</div><!-- /.form-container -->
 										</form><!-- /.form-cnt -->
 
 										<form class="form-inline form-cnt">
 											<div class="form-group">
 												<label>&nbsp;</label>
-												<span class="text col-md-offset-3">Use spaces to separate tags. Use single quotes (') for phrases.</span>
+												<!-- <span class="text col-md-offset-3">Use spaces to separate tags. Use single quotes (') for phrases.</span> -->
 											</div>
 										</form><!-- /.form-cnt -->
 
