@@ -122,7 +122,7 @@ img[src="assets/images/blank.gif"] {
   -ms-transition: all linear 0.2s;
   -o-transition: all linear 0.2s;
   transition: all linear 0.2s;
-  background: #b37687;
+  background: #108bea;
   color: #fff;
   border: none;
   font-size: 14px;
@@ -567,7 +567,7 @@ img[src="assets/images/blank.gif"] {
 
 .special-product .product .image img {width:100%}
 .special-product .product .col {padding-right:0px}
-.special-product .product .btn-primary {background:none; padding:0px; color:#e6d7eb; text-decoration:underline; margin-top:5px;}
+.special-product .product .btn-primary {background:none; padding:0px; color:#157ed2; text-decoration:underline; margin-top:5px;}
 
 .special-product .product:last-child {
   margin-top: 20px;
@@ -1097,7 +1097,7 @@ a {
 .top-bar {
   padding:0px;
   font-size: 14px;
-  background: #e6d7eb;
+  background: #157ed2;
 }
 .top-bar .cnt-account {
   float: right;
@@ -1196,12 +1196,12 @@ a {
 /* Header
 /*===================================================================================*/
 header{
-    background: #d9a5b3;
+    background: #fdd922;
 }
 
 .main-header {
   padding:25px 0px 30px 0px;
-  background: #e6d7eb;
+  background: #157ed2;
 }
 .main-header .logo-holder {
   margin-top:5px;
@@ -1290,7 +1290,7 @@ header{
   margin: 0px;
   padding: 19px 25px 19px;
   text-align: center;
-    background-color: #d9a5b3;
+    background-color: #fdd922;
 
 }
 .main-header .top-search-holder .search-area .search-button:after {
@@ -1364,7 +1364,7 @@ header{
     left: 20px;
     top: 10px;
     width: 18px;
-    background: #d9a5b3;
+    background: #fdd922;
     color: #0f6cb2;
     font-size: 11px;
     text-align: center;
@@ -1684,7 +1684,7 @@ header{
   font-size: 20px;
   font-family:'Barlow', sans-serif;
   padding: 15px 17px;
-  background-color: #d9a5b3;
+  background-color: #fdd922;
   font-weight:500;
   letter-spacing: 0.2px;
 }
@@ -2843,7 +2843,7 @@ font-family: FontAwesome;
 }
 .product .cart .action ul li.add-cart-button .btn.btn-primary.icon {
   border-radius: 999px;
-  background: #d9a5b3 ;
+  background: #fdd922 ;
   padding: 10px 14px;
   margin-left:3px;
   margin-right:3px
@@ -2924,7 +2924,7 @@ font-family: FontAwesome;
 .cart .action .add-cart-button .btn.btn-primary.icon {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  background: #d9a5b3 ;
+  background: #fdd922 ;
   color:#333
 }
 
@@ -4021,7 +4021,7 @@ font-family: FontAwesome;
 .single-product .qty {float:left; padding-left:15px}
 .single-product .qty-count {float:left;  padding-left:15px}
 .single-product .add-btn {float:left;  padding-left:15px}
-.single-product .add-btn .btn-primary {padding:12px 30px; font-size: 18px; background-color: #d9a5b3; color:#333}
+.single-product .add-btn .btn-primary {padding:12px 30px; font-size: 18px; background-color: #fdd922; color:#333}
 
 .single-product .product-info .quantity-container .label {
   font-size: 14px;
@@ -5428,7 +5428,7 @@ font-family: FontAwesome;
   z-index: 1;
 }
 
-.checkout-btn { background:#d9a5b3; color:#333; padding: 12px 25px; font-size:20px}
+.checkout-btn { background:#fdd922; color:#333; padding: 12px 25px; font-size:20px}
 
 
 .product-comparison .page-title {
@@ -5504,7 +5504,7 @@ font-family: FontAwesome;
   line-height: 10px;
   border: medium none;
   color: #333;
-  background:#d9a5b3
+  background:#fdd922
 }
 .body-content .x-page .x-text form input {
   border: 1px solid #e0e0e0;
@@ -6613,7 +6613,7 @@ td.cart-product-grand-total {
     font-weight: 500; 
 }
 .shopping-cart .cart-shopping-total table tbody tr td .cart-checkout-btn button {
-    background: #d9a5b3;
+    background: #fdd922;
     color: #333;
     padding: 12px 25px;
     font-size: 15px;
@@ -6696,7 +6696,7 @@ td.cart-product-sub-total span {
     font-size: 14px;
 }
 .shopping-cart .cart-shopping-total table tbody tr td .cart-checkout-btn button {
-    background: #d9a5b3;
+    background: #fdd922;
     color: #333;
     padding: 12px 25px;
     font-size: 15px;
@@ -7034,7 +7034,7 @@ td.cart-product-sub-total span {
 
 
 .shopping-cart .cart-shopping-total table tbody tr td .cart-checkout-btn button {
-    background: #d9a5b3;
+    background: #fdd922;
     color: #333;
     padding: 12px 25px;
     font-size: 15px;
@@ -7244,7 +7244,7 @@ td.cart-product-sub-total span {
     font-weight: 500;
 }
 .shopping-cart .cart-shopping-total table tbody tr td .cart-checkout-btn button {
-    background: #d9a5b3;
+    background: #fdd922;
     color: #333;
     padding: 12px 25px;
     font-size: 15px;
