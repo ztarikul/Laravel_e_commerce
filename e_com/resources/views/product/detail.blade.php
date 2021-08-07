@@ -225,11 +225,17 @@
 
 											<div class="reviews">
 												<div class="review">
-													@foreach($product->reviews as $review)
-													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date float-right" ><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
+													@if($product->reviews())
+													@foreach($product->reviews()->paginate(1) as $review)
+													<p><b>{{$review->customer->f_name}} {{$review->customer->l_name}}</b></p>
+													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date pull-right" ><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
 													<div class="text">{{$review->review_body}}</div>
+													<hr>
 													@endforeach
-																										</div>
+													{{$product->reviews()->paginate(1)->links()}}
+													@endif
+
+													</div>
 											
 											</div><!-- /.reviews -->
 										</div><!-- /.product-reviews -->
