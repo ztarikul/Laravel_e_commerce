@@ -240,78 +240,37 @@
 											</div><!-- /.reviews -->
 										</div><!-- /.product-reviews -->
 										
-
 										
+							        </div><!-- /.product-tab -->
+								</div><!-- /.tab-pane -->
+								<div id="tags" class="tab-pane">
+									<div class="product-tab">
+																				
+										<div class="product-reviews">
+											<h4 class="title">Customer Reviews</h4>
+
+											<div class="reviews">
+												<div class="review">
+													@if($product->reviews())
+													@foreach($product->reviews()->paginate(1) as $review)
+													<p><b>{{$review->customer->f_name}} {{$review->customer->l_name}}</b></p>
+													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date pull-right" ><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
+													<div class="text">{{$review->review_body}}</div>
+													<hr>
+													@endforeach
+													{{$product->reviews()->paginate(1)->links()}}
+													@endif
+
+													</div>
 											
-										<!-- <div class="product-add-review">
-											<h4 class="title">Write your own review</h4>
-											<div class="review-table">
-												<div class="table-responsive">
-												<form action="{{route('product.product_review')}}" method="post" class="cnt-form">
-														@csrf
-														<input type="hidden" name="product_id" value="{{$product->id}}">
-													<table class="table">	
-														<thead>
-															<tr>
-																<th class="cell-label">&nbsp;</th>
-																<th>1 star</th>
-																<th>2 stars</th>
-																<th>3 stars</th>
-																<th>4 stars</th>
-																<th>5 stars</th>
-															</tr>
-														</thead>	
-														<tbody>
-															<tr>
-																<td class="cell-label">Review</td>
-																<td><input type="radio" name="rating" class="radio" value="1"></td>
-																<td><input type="radio" name="rating" class="radio" value="2"></td>
-																<td><input type="radio" name="rating" class="radio" value="3"></td>
-																<td><input type="radio" name="rating" class="radio" value="4"></td>
-																<td><input type="radio" name="rating" class="radio" value="5"></td>
-															</tr>
-															
-															
-														</tbody>
-													</table>
-												</div>
-											</div>
-											
-											<div class="review-form">
-												<div class="form-container">
-													
-														
-														<div class="row">
-															<div class="col-sm-6">
-															
-																<div class="form-group">
-																	<label for="exampleInputSummary">Summary <span class="astk">*</span></label>
-																	<input type="text" name="summary" class="form-control txt" id="exampleInputSummary" placeholder="">
-																</div>
-															</div>
-
-															<div class="col-md-6">
-																<div class="form-group">
-																	<label for="exampleInputReview">Review <span class="astk">*</span></label>
-																	<textarea name="review_body" class="form-control txt txt-review" id="exampleInputReview" rows="4" placeholder=""></textarea>
-																</div>
-															</div>
-														</div>
-														
-														<div class="action text-right">
-															<button type="submit" name="submit" class="btn btn-primary btn-upper">SUBMIT REVIEW</button>
-														</div>
-
-													</form>
-												</div>
-											</div>
-
-										</div>									 -->
+											</div><!-- /.reviews -->
+										</div><!-- /.product-reviews -->
+										
 										
 							        </div><!-- /.product-tab -->
 								</div><!-- /.tab-pane -->
 
-								<div id="tags" class="tab-pane">
+								<div id="" class="tab-pane">
 									<div class="product-tag">
 										
 										<!-- <h4 class="title">Product Tags</h4> -->
