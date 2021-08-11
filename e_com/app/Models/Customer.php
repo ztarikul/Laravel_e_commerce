@@ -14,7 +14,7 @@ class Customer extends Model
     public function product_reviews(){
         return $this->hasMany(ProductReview::class);
     }
-    public function questionandanswers(){
+    public function question_answers(){
         return $this->hasMany(QueAndAns::class);
     }
 }

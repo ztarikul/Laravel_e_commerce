@@ -247,23 +247,47 @@
 									<div class="product-tab">
 																				
 										<div class="product-reviews">
-											<h4 class="title">Customer Reviews</h4>
+											<h4 class="title">Q&A</h4>
 
 											<div class="reviews">
 												<div class="review">
-													@if($product->reviews())
-													@foreach($product->reviews()->paginate(1) as $review)
-													<p><b>{{$review->customer->f_name}} {{$review->customer->l_name}}</b></p>
-													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date pull-right" ><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
-													<div class="text">{{$review->review_body}}</div>
+													@if($product->questionandanswers())
+													@foreach($product->questionandanswers()->paginate(2) as $qanda)
+													<p><b>{{$qanda->customer->f_name}} {{$qanda->customer->l_name}}</b></p>
+													<div class="review-title"><span class="summary">{{$qanda->question}}</span><span class="date pull-right" ><i class="fa fa-calendar"></i><span>{{$qanda->created_at->diffForHumans()}} </span></span></div>
+													@if($qanda->answer)
+													<div class="text">{{$qanda->answer}}</div>
+													@else
+													<div class="text">Pending...</div>
+													@endif
 													<hr>
 													@endforeach
-													{{$product->reviews()->paginate(1)->links()}}
+													{{$product->questionandanswers()->paginate(2)->links()}}
 													@endif
 
 													</div>
 											
 											</div><!-- /.reviews -->
+                                         
+											<form class="form-inline form-cnt">
+											<div class="form-container">
+									
+										
+
+												<div class="form-group">
+													<label for="exampleInputTag">Write Your Question: </label>
+													<textarea name="question_body" id="" cols="30" rows="1"></textarea> 
+													
+												</div>
+
+												<button class="btn btn-upper btn-primary btn-sm" type="submit">Submit</button>
+											</div><!-- /.form-container -->
+										</form>
+
+
+
+
+
 										</div><!-- /.product-reviews -->
 										
 										
@@ -277,23 +301,7 @@
 										<form class="form-inline form-cnt">
 											<div class="form-container">
 									
-											<div class="questions" >
-												<div class="question" style="background-color:#f3f3f3">
-													@foreach($product->reviews as $review)
-													<div class="review-title"><span class="summary">{{$review->summary}}</span><span class="date"><i class="fa fa-calendar"></i><span>{{$review->created_at->diffForHumans()}} </span></span></div>
-													<div class="text">{{$review->review_body}}</div>
-													@endforeach
-													</div>
-											
-											</div><!-- /.reviews -->
-										</div>
-
-
-
-
-
-
-
+										
 
 												<div class="form-group">
 													<label for="exampleInputTag">Write Your Question: </label>
@@ -302,8 +310,8 @@
 												</div>
 
 												<button class="btn btn-upper btn-primary" type="submit">Submit</button>
-											</div><!-- /.form-container -->
-										</form><!-- /.form-cnt -->
+											</div>
+										</form>
 
 										<form class="form-inline form-cnt">
 											<div class="form-group">

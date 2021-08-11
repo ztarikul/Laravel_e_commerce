@@ -19,7 +19,14 @@ class PostController extends Controller
         return view('posts.blogs', ['posts' => $posts]);
 
     }
-
+    function blog_pagination(Request $request)
+    {
+     if($request->ajax())
+     {
+      $posts = Post::paginate(3);
+      return view('posts.blog_pagination',['posts' => $posts] )->render();
+     }
+    }
     /**
      * Show the form for creating a new resource.
      *
