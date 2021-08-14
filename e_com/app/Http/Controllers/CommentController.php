@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
 use App\Models\comment;
+use App\Models\Post;
 
 class CommentController extends Controller
 {
@@ -41,10 +42,18 @@ class CommentController extends Controller
             'comment'=> 'required',
        ]);
         $input['post_id'] = $request['post_id'];
-        $input['customer_id'] = Session::get('LoggedCustomer');
+        if(Session::get('LoggedCustomer')){
+            $input['customer_id'] = Session::get('LoggedCustomer');
+        }else{
+            $input['user_id'] = auth()->id();
+        }
+        
         $comment = new Comment($input);
         $comment->save();
-        return redirect()->back();
+        $post = Post::find($input['post_id']);
+        return view('posts.comments',['post' => $post])->render();
+
+
 
        
     }

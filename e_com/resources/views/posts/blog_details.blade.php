@@ -61,81 +61,15 @@
 	</div>
 </div>
 	<div class="blog-review wow fadeInUp">
-	<div class="row">
-		<div class="col-md-12">
-			<h3 class="title-review-comments">{{$post->comments()->count()}} Comments</h3>
-		</div>
-		@foreach($post->comments as $comment)
-		<div class="col-md-2 col-sm-2">
-			<img src="{{asset('images/testimonials/member1.png')}}" alt="Responsive image" class="img-rounded img-responsive">
-		</div>
-       
-		
-		<div  class="col-md-10 col-sm-10 blog-comments outer-bottom-xs">
-			<div class="blog-comments inner-bottom-xs">
-				<h4 id = "b">{{$comment->post->user->name}}</h4>
-				<span class="review-action pull-right">
-					On, {{$comment->created_at->diffForHumans()}}    
-					
-					<!-- <button type="button" onClick="MyFunction();"> Reply</button> -->
-				</span>
-				<p>{{$comment->comment}}</p>
-				<!-- <p><a href="">Reply</a>|<a href="">Delete</a>|<a href="">Edit</a></p>
-				 -->
-				 <form action="{{route('comment.destroy',$comment->id)}}" method="post">
-					 @csrf
-					 @method('DELETE')
-				 <a href="" onClick="MyFunction();" class="btn-upper btn btn-info btn-sm "> Reply</a>&nbsp<a href=""  onClick="MyFunction();" class="btn-upper btn btn-warning btn-sm ">Edit</a>&nbsp <button type="submit" class="btn-upper btn btn-danger btn-sm " onClick="return confirm('Do you want to delete your comment?')">Delete</button>
-				</form>   
-				
-			</div> 
-	
-			<!-- reply -->
-			<div class="blog-comments-responce outer-top-xs ">
-				<div class="row">
-					@foreach($comment->replies as $reply)
-					<div class="col-md-2 col-sm-2">
-						<img src="{{asset('images/testimonials/member2.png')}}" alt="Responsive image" class="img-rounded img-responsive">
-					</div>
-
-					<div class="col-md-10 col-sm-10 outer-bottom-xs">
-						<div class="blog-sub-comments inner-bottom-xs">
-							<h4>{{$reply->comment->post->user->name}}</h4>
-							<span class="review-action pull-right">
-							On, {{$reply->created_at->diffForHumans()}}   
-								
-								<!-- <a href="#"> Reply</a> -->
-							</span>
-							<p>{{$reply->reply}}</p>
-						</div>
-					</div>
-					@endforeach
-				</div>
-			</div>
-		</div>
-
-        @endforeach
-
-
-		<!-- Reply Functions -->
-		<div id="comment_box" class="row">
-				<div class="col-md-12">
-					<form class="register-form" role="form">
-						<div class="form-group">
-						<label class="info-title" for="exampleInputComments">Your Reply <span>*</span></label>
-						<textarea class="form-control unicase-form-control" id="exampleInputComments" ></textarea>
-					  </div>
-					</form>
-				</div>
-				<div class="col-md-12 outer-bottom-small">
-					<button type="submit" class="btn-upper btn btn-primary btn-sm checkout-page-button">submit</button>
-				</div>
-			</div>
+	<div id="comments_page">
 
 
 
-		<div class="post-load-more col-md-12"><a class="btn btn-upper btn-primary" href="#">Load more</a></div>
-	</div>
+     @include('posts.comments')
+     </div>
+
+
+
 </div>					<div class="blog-write-comment outer-bottom-xs outer-top-xs">
 	<div class="row">
 		<div class="col-md-12">
@@ -143,7 +77,7 @@
 		</div>
 	
 		<div class="col-md-12">
-			<form class="register-form" role="form" action="{{route('comment.store')}}" method="post">
+			<form class="register-form" role="form" action="{{route('comment.store')}}" method="post" id="comments_form">
 				@csrf
 				<div class="form-group">
 			    <label class="info-title" for="exampleInputComments">Your Comments <span>*</span></label>
@@ -154,6 +88,31 @@
 			<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Submit Comment</button>
 		     </div>
 			</form>
+            <script>
+             $("#comments_form").submit(function(e){
+              e.preventDefault();
+			  jQuery.ajax({
+                     url:"{{route('comment.store')}}",
+					 data: jQuery('#comments_form').serialize(),
+					 type: 'post',
+					 success:function(post){
+				
+					jQuery('#comments_form')[0].reset();
+                    jQuery('#comments_page').html(post);
+
+					 }
+
+			  });
+			
+
+			 });
+
+
+			</script>
+
+
+
+
 		</div>
 		
 	</div>
@@ -166,6 +125,7 @@
 					<div class="sidebar-module-container">
 						<div class="search-area outer-bottom-small">
     <form>
+
         <div class="control-group">
             <input placeholder="Type to search" class="search-field">
             <a href="#" class="search-button"></a>   
@@ -361,6 +321,8 @@
 		</div>
 	</div>
 </div>
+ 
+
 
 
      
