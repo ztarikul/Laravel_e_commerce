@@ -227,7 +227,7 @@
                             $subsubcategories = App\Models\SubSubCatagory::where('sub_category_id',$subcategory->id)->get();
                               ?>
                               @foreach( $subsubcategories as $subsubcategory)
-                              <li><a href="#">{{$subsubcategory->name}}</a></li>
+                              <li><a href="{{route('subsubcategory_products',$subsubcategory->id)}}">{{$subsubcategory->name}}</a></li>
                               @endforeach
                             </ul>
                            

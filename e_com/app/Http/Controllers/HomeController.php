@@ -43,5 +43,11 @@ class HomeController extends Controller
         return view('covid_tracker', ['data' => $data]);
         // dd($data);
     }
-   
+   public function subsubcategory_products($id){
+        // dd($id);
+        $subsubcategory_products = Product::where('sub_sub_catagory_id', $id)->get();
+        return view('product.category',['products' =>$subsubcategory_products ]);
+
+
+   }
 }
